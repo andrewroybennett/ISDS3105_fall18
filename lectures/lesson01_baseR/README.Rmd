@@ -132,20 +132,58 @@ Work out the exercises on a new branch of your git repo. Once you are confident 
 Respond to the following questions and push the responses to your GitHub:
  
  - Create a character vector `family` with your family members' name
+ 
+```{r}
+family <- c("Andrew", "Jacob", "Ryan", "Gary", "Melissa")
+```
+ 
  - Create a vector `birth` with their birth year 
+ 
+```{r}
+birth <- c(1997, 2002, 2005, 1971, 1972)
+```
+ 
  - Create another vector `age` with your family members' ages (calculated using `birth`)
+ 
+```{r}
+age <- 2018 - birth
+```
+ 
  - Use `typeof()` to make sure that `family`, `birth`, and `age` are the appropriate type (character, integer/double, integer/double)
+ 
+```{r}
+typeof(family)
+typeof(birth)
+typeof(age)
+```
+ 
  - Use `names()` to name the elements of `age` with the family members' names from `family`
- - Use inline code `r ##` to print your name and age (using indexing)
+ 
+```{r}
+names(age) <- family
+```
+ 
+ - Use inline code `r ##` to print your name (using indexing)
+ 
+My name is `r family[1]`
 
  - What happens when:
    + You extract using a positive index bigger than the vector length?
+   
+   The results say `NA`
+   
    + You subset by a name that doesn't exist?
+   
+   It says "named numeric(0)"
+   
    + You assign a number to position 20 of the age vector? 
    
+   When I call it, it says [1] NA
+   I think I did this right. I don't believe we did this in class.
+   
  - Read carefully the documentation for `is.vector()`. If `is.vector(x)` retrieves `TRUE`, does it mean that `x` is an atomic vector?
-
-
+ 
+  Not necessarily
 
 
 
